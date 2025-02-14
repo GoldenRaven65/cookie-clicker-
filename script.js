@@ -96,6 +96,7 @@ class CookieClicker {
     updateUI() {
         this.countElement.textContent = this.cookies;
         localStorage.setItem("cookies", this.cookies)
+        document.title = `Ron Coins: ${this.cookies}`;
     }
 }
 new CookieClicker();
