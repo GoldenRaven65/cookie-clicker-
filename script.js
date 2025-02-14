@@ -15,6 +15,7 @@ class CookieClicker {
         this.superUpgradeButton = document.getElementById("super-upgrade");
         this.dansupgradeButton = document.getElementById("dans-upgrade")
         this.rewardVideo = document.getElementById("reward-video");
+        this.dansVideo = document.getElementById("dans-video");
         
         this.cookieElement.addEventListener("click", () => this.clickCookie());
         this.upgradeButton.addEventListener("click", () => this.buyUpgrade());
@@ -50,7 +51,7 @@ class CookieClicker {
             this.cookies -= this.autoUpgradeCost;
             this.cookiesPerSecond += 0.5;
             this.autoUpgradeCost = Math.floor(this.autoUpgradeCost * 1.2);
-            this.autoUpgradeButton.textContent = `Auto Cookie (+0.5/sec) [Cost: ${this.autoUpgradeCost}]`;
+            this.autoUpgradeButton.textContent = `Rob Penders geeft training (+0.5/sec) [Cost: ${this.autoUpgradeCost}]`;
             this.updateUI();
         }
     }
@@ -77,8 +78,8 @@ class CookieClicker {
         this.dansupgradeCost = Math.floor(this.dansupgradeCost * 1.15)
         this.dansupgradeButton.textContent = `Super Auto Cookie (+1/sec) [Cost: ${this.dansupgradeCost}]`;
         // de video aan kondigen andere id en video er in zetten
-        // this.rewardVideo.style.display = "block";
-        // this.rewardVideo.play();
+        this.dansVideo.style.display = "block";
+        this.dansVideo.play();
         this.updateUI();
       }
       if(this.UpgradeBought <= 1 ){

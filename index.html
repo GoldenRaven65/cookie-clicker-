@@ -5,22 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ron Jans Clicker</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
     <h1>Ron Jans Clicker</h1>
     <p>Ron coins: <span id="cookie-count">0</span></p>
     <img src="Naamloos.jpg" class="cookie" id="cookie" alt="Cookie">
     <br>
-    <button class="button" id="auto-upgrade">Rob Penders geeft training (+0.1/sec) [Cost: 10]</button>
-    <button class="button" id="upgrade">Bram van Polen scoort (+1 per click) [Cost: 50]</button>
-    <button class="button" id="super-upgrade">Boodschapen lijstje (+1/sec) [Cost: 150]</button>
-    <button class="button" id="dans-upgrade">De Ron Jans dans (+8/sec) [Cost: 300]</button>
+    <!-- data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tooltip on top" -->
+    <button type="button" id="auto-upgrade" class="btn btn-warning" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="(+0.1/sec) [Cost: 10]">
+        Rob Penders geeft training
+      </button>
+      
+    <button class="btn btn-warning" id="upgrade">Bram van Polen scoort (+1 per click) [Cost: 50]</button>
+    <button class="btn btn-warning" id="super-upgrade">Boodschapen lijstje (+1/sec) [Cost: 150]</button>
+    <button class="btn btn-warning" id="dans-upgrade">De Ron Jans dans (+8/sec) [Cost: 300]</button>
     <br>
     <video id="reward-video" width="320" height="240" controls loop style="display:none;" class="video">
         <source src="/videos/SamenvoordeVoedselbankmetRonJans.mp4" type="video/mp4">
         .
     </video>
+    <video id="dans-video" width="320" height="240" controls loop style="display:none;" class="videoDans">
+        <source src="/videos/SamenvoordeVoedselbankmetRonJans.mp4" type="video/mp4">
+        .
+    </video>
     
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
