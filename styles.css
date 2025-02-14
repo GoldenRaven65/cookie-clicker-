@@ -25,3 +25,8 @@ body {
 .button:hover {
     background-color: #e68900;
 }
+.video{
+position: absolute;
+right: 0px;
+bottom: -37px;
+}
